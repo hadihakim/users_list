@@ -1,0 +1,28 @@
+<ng-container *ngIf="!isLoading && !error; else loadingOrError">
+    <section class="results">
+        <div class="user-list">
+            <app-user-item *ngFor="let userDetails of filteredUserList" [userDetails]="userDetails">
+            </app-user-item>
+        </div>
+        <mat-paginator *ngIf="!isLoading" [length]="totalUsers" [pageSize]="pageSize" [pageIndex]="currentPageIndex"
+            (page)="onPageChange($event)">
+        </mat-paginator>
+    </section>
+</ng-container>
+
+<ng-template #loadingOrError>
+    <div *ngIf="error && !isLoading" class="error-card">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Warning</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                {{ error }}
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+    <section *ngIf="isLoading" class="home-spinner-container">
+        <mat-spinner diameter="50" color="primary"></mat-spinner>
+    </section>
+</ng-template>

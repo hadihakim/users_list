@@ -1,0 +1,45 @@
+.user-details-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .user-details-card {
+    min-width: 300px;
+    min-height: fit-content;
+  }
+  
+  .user-details-card-container .user-avatar {
+    width: 100%;
+  }
+  
+  .user-details-card-container .mat-mdc-card-content {
+    padding: 1rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+  }
+
+  .user-details-card-container .mat-mdc-card-image {
+    min-width: 300px;
+    min-height: 270px;
+  }
+
+.user-details-card-container .back-button {
+    background-color: transparent;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+
+.user-details-card-container .back-button:hover {
+    opacity: .7;
+}
+
+.user-details-card-container .back-icon {
+    color: rgb(50, 50, 90);
+    font-size: 24px;
+}

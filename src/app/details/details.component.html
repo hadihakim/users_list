@@ -1,0 +1,13 @@
+<div class="user-details-card-container" [@popupAnimation]>
+    <mat-card class="user-details-card">
+        <img mat-card-image class="user-avatar" [src]="userDetails?.avatar" alt="photo of {{ userDetails?.first_name }}">
+        <mat-card-content>
+            <p class="user-name">{{ userDetails?.first_name }}, {{ userDetails?.last_name }}</p>
+            <p class="user-id">ID: {{ userDetails?.id }}</p>
+            <p class="user-email">Email: {{ userDetails?.email }}</p>
+        </mat-card-content>
+        <button mat-icon-button class="back-button" (click)="goBack()">
+            <mat-icon class="back-icon">undo<p>Back</p></mat-icon> Back
+        </button>
+    </mat-card>
+</div>

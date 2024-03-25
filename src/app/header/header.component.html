@@ -1,0 +1,8 @@
+<section class="header">
+    <a [routerLink]="['/']" class="logo">
+        <img class="brand-logo" src="/assets/user-logo.png" alt="logo" aria-hidden="true" />
+    </a>
+    <form>
+        <input type="text" placeholder="Filter user by id" #filter (input)="filterResults(filter.value)" />
+    </form>
+</section>
